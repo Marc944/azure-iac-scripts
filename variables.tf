@@ -8,3 +8,8 @@ variable "location" {
   type        = string
 }
 
+variable "managed_disk_id" {
+  description = "The ID of the existing managed disk to attach"
+  type        = string
+}
+
