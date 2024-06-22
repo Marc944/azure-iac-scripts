@@ -17,9 +17,9 @@ COPY . /app/
 EXPOSE 5000
 
 # Set environment variables for Azure Key Vault access
-ENV AZURE_CLIENT_ID="284d9e06-b088-40cf-b4a2-295f748453c2"
-ENV AZURE_TENANT_ID="bd4f0481-b137-40f1-9e64-20cfd55fbf49"
-ENV AZURE_CLIENT_SECRET="A.S8Q~VHLc9L3CRFoZNwKwMGoS4Qj_spWp076bCY"
+ENV AZURE_CLIENT_ID="<Can be pulled from Azure App Registrations with name jenkins>"
+ENV AZURE_TENANT_ID="<Can be pulled from Azure App Registrations with name jenkins>"
+ENV AZURE_CLIENT_SECRET="<Can be pulled from Azure Key Vault with the secret name jenkins-rbac-sp-secret>"
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
